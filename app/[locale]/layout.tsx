@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import "@/styles/loading.css";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Metadata, Viewport } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import {
@@ -89,6 +90,7 @@ export default async function LocaleLayout({
             </main>
 
             {messages.Footer && <Footer />}
+            <SpeedInsights />
           </ThemeProvider>
         </NextIntlClientProvider>
         <TailwindIndicator />
